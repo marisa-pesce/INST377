@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample HTML Demonstration Page</title>
+    <style>
+    .wrapper {
+        width: 60%;
+        background: grey;
+        margin: auto;
+        height: 100vh;
+      }
+
+      .head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+        font-weight: bold;
+      }
+
+      .head a {
+        margin: 0;
+        padding: 0;
+      }
+      .sub-heading {
+        font-weight: normal;
+      }
+      .div {
+        color: red;
+        width: 100px;
+        height: 42px;
+      }
+
+      .container0{
+        background: pink;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .container1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap; 
+      }
+
+      .container1-textbox {
+        height: 100px;
+        width: 350px;
+        margin-bottom: 25px;
+        background: red;
+        justify-content: center;
+        display: flex;
+        align-items: center; 
+      }
+
+      .container2 {
+        height: 100px;
+        width: 350px;
+        margin-bottom: 25px;
+        background: red;
+        align-items: center;
+        justify-content: center;
+        display: flex; 
+      }
+      
+      .container2-textbox{
+        background: lightblue;
+        height: 100px;
+        width: 350px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+     
+     
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head" id="start">
+        <h1>Sample Header</h1>
+        <div class="sub-heading">
+          <a href="#"> anchor tag to nowhere </a>
+        </div>
+      </div>
+      <div class="container0">
+        <div class="interior">
+          hello
+        </div>
+      </div>
+      <div class="container1">
+        <div class="container1-textbox">
+          Click me I'm great
+        </div>
+        <div class="container2"></div>
+        <div class="container2-textbox">
+          <p>
+            World #2
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

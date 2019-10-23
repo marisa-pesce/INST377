@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Test AJAX page</title>
+  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Test AJAX page</div>
+      <button class="button" onclick="loadData()">Load Some JSON</button>
+      <div class="content"></div>
+      <ol class = "list">
+      </ol>
+      <div class="footer"></div>
+    </div>
+  </div>
+  <script>
+
+    function getrandom(min,max){
+        let min = Math.ceil(min);
+        let max = Math.floor(max);
+        return Math.floor(Math.random() * (max-min+1)) +min;
+    }
+
+
+
+    function loadData() {
+      fetch('ajax_sample.json')
+        .then(res => res.json())
+        .then(res=> {
+        let  getData = res.map(c => c.name + ", " + c.code) //get json data
+        let data = document.querySelector(".list").innerHTML= ""
+
+       
+
+        for(let i = 0; i<15; i+=1) {
+            let name = getrandom(0,242)
+            let item = document.createElement("li")
+            item.innerText = getData[name]  
+            newArray.appendChild(item)
+        }
+    })
+    }
+        //.then(data => data.map(c => c.code))
+        //.then(data => document.querySelector(".content").innerText = data);
+    
+  </script>
+</body>
+
+</html>
